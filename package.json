@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-immutable-bindings",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Eslint rule to disallow any binding reassignments",
   "module": "index.mjs",
   "type": "module",
