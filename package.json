@@ -1,0 +1,12 @@
+{
+  "name": "eslint-plugin-immutable-bindings",
+  "version": "1.0.0",
+  "description": "Eslint rule to disallow any binding reassignments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
