@@ -11,11 +11,14 @@ than `prefer-const` as it also addresses bindings derived from function argument
      a = 2;
    }
    ```
+
    yields:
    ```
      11:3   error  Binding reassignment is not allowed for variable 'a'  ib/no-reassign
    ```
+
    This works for destructured arguments too, i.e.
+
    ```js
    function test ({a}) {
      a = 2;
