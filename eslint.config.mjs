@@ -1,6 +1,6 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
-import immutableBindings from "eslint-plugin-immutable-bindings";
+import immutableBindings from "eslint-plugin-immutable-bindings/index.mjs";
 
 export default [
   {

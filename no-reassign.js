@@ -32,6 +32,7 @@ export default {
     let allowPatternString = context.options[0]?.allowPattern;
     let allowPattern = allowPatternString != null ? new RegExp(allowPatternString) : null;
 
+
     return {
       AssignmentExpression(node) {
         if (node.left.type === 'Identifier') {
