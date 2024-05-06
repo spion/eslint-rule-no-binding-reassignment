@@ -3,6 +3,39 @@
 An ESLint plugin that disallows binding reassignments. Should be significantly more effective
 than `prefer-const` as it also addresses bindings derived from function arguments.
 
+## Why is this better than `prefer-const`?
+
+1. It can address reassignments of function arguments
+   ```js
+   function test (a) {
+     a = 2;
+   }
+   ```
+   yields:
+   ```
+     11:3   error  Binding reassignment is not allowed for variable 'a'  ib/no-reassign
+   ```
+   This works for destructured arguments too, i.e.
+   ```js
+   function test ({a}) {
+     a = 2;
+   }
+  ```
+
+2. You can force a prefix using `{allowPattern: "^mut"}`, which is visible everywhere in the code
+
+  ```js
+  let mutItem = 5;
+
+  // ...
+  // reassign
+  mutItem = 8;
+
+  // ...
+  useCode(mutItem) // very aware of mutable binidng usage sites,
+                   // even in code reviews on github
+  ```
+
 ## Installation
 
 You can install this plugin using npm:
