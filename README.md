@@ -25,6 +25,8 @@ than `prefer-const` as it also addresses bindings derived from function argument
    }
   ```
 
+  should result with the same error
+
 2. You can force a prefix using `{allowPattern: "^mut"}`, which is visible everywhere in the code
 
   ```js
