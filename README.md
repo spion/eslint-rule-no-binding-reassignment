@@ -29,17 +29,17 @@ than `prefer-const` as it also addresses bindings derived from function argument
 
 2. You can force a prefix using `{allowPattern: "^mut"}`, which is visible everywhere in the code
 
-  ```js
-  let mutItem = 5;
+   ```js
+   let mutItem = 5;
 
-  // ...
-  // reassign
-  mutItem = 8;
+   // ...
+   // reassign
+   mutItem = 8;
 
-  // ...
-  useCode(mutItem) // very aware of mutable binidng usage sites,
-                   // even in code reviews on github
-  ```
+   // ...
+   useCode(mutItem) // very aware of mutable binidng usage sites,
+                    // even in code reviews on github
+   ```
 
 ## Installation
 
