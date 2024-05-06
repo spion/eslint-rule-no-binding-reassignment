@@ -2,13 +2,12 @@
  * @fileoverview Disallow reassignment of any bindings.
  * @author Gjorgji Kjosev
  */
-"use strict";
 
 //------------------------------------------------------------------------------
 // Rule Definition
 //------------------------------------------------------------------------------
 
-module.exports = {
+export default {
   meta: {
     type: 'suggestion',
     docs: {
