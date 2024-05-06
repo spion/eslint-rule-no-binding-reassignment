@@ -13,17 +13,24 @@ npm install eslint-plugin-immutable-bindings --save-dev
 
 ## Usage
 
-Add `"immutable-bindings"` to your ESLint configuration’s `plugins` array:
+Add `"immutable-bindings"` to your ESLint configuration’s `plugins` array, then use
+the rule `no-reassign` provided by it:
 
 
 ```js
-// .eslintrc.js
-module.exports = {
-  plugins: ['immutable-bindings'],
-  rules: {
-    'immutable-bindings/no-reassign': 'error',
+// eslint.config.mjs
+import immutableBindings from "eslint-plugin-immutable-bindings";
+
+export default [
+  {
+    plugins: {
+      ib: immutableBindings
+    },
+    rules: {
+      'ib/no-reassign': 'error'
+    }
   },
-};
+];
 ```
 
 ## Configuration Examples
@@ -32,15 +39,20 @@ module.exports = {
 
 To allow reassignment for variables whose names start with “mut”:
 
-
 ```js
-// .eslintrc.js
-module.exports = {
-  plugins: ['immutable-bindings'],
-  rules: {
-    'immutable-bindings/no-reassign': ['error', { allowPattern: '^mut' }],
+// eslint.config.mjs
+import immutableBindings from "eslint-plugin-immutable-bindings";
+
+export default [
+  {
+    plugins: {
+      ib: immutableBindings
+    },
+    rules: {
+      'ib/no-reassign': ['error', { allowPattern: '^mut' }],
+    }
   },
-};
+];
 ```
 
 ## License
