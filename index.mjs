@@ -1,4 +1,4 @@
-import noReassign from './no-reassign'
+import noReassign from './no-reassign.js'
 let plugin = {
 
   // preferred location of name and version

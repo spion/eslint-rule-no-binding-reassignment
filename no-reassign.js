@@ -30,13 +30,13 @@ export default {
   },
   create(context) {
     let allowPatternString = context.options[0]?.allowPattern;
-    let allowPattern = allowPattern != null ? new RegExp(allowPatternString) : null;
+    let allowPattern = allowPatternString != null ? new RegExp(allowPatternString) : null;
 
     return {
       AssignmentExpression(node) {
         if (node.left.type === 'Identifier') {
           const variableName = node.left.name;
-          if (allowPattern && !allowPattern.test(variableName)) {
+          if (!allowPattern || !allowPattern.test(variableName)) {
             context.report({
               node,
               message: `Binding reassignment is not allowed for variable '${variableName}'`,

@@ -5,10 +5,12 @@ import immutableBindings from "eslint-plugin-immutable-bindings";
 export default [
   {
     files: ["**/*.js"],
-    plugins: [immutableBindings],
-    languageOptions: {sourceType: "commonjs"},
+    plugins: {
+      ib: immutableBindings
+    },
+    languageOptions: {sourceType: "module"},
     rules: {
-      'immutable-bindings/no-reassign': 'error',
+      'ib/no-reassign': 'error',
     }
   },
   {languageOptions: { globals: globals.browser }},

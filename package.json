@@ -2,7 +2,7 @@
   "name": "eslint-plugin-immutable-bindings",
   "version": "1.0.2",
   "description": "Eslint rule to disallow any binding reassignments",
-  "module": "index.js",
+  "module": "index.mjs",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,7 @@
   "devDependencies": {
     "@eslint/js": "^9.2.0",
     "eslint": "^9.2.0",
-    "eslint-plugin-immutable-bindings": "^1.0.1",
+    "eslint-plugin-immutable-bindings": "^1.0.2",
     "globals": "^15.1.0"
   }
 }
